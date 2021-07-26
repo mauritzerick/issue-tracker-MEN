@@ -15,7 +15,7 @@ $("#update_issue").submit(function(event){
     console.log(data);
 
     var request = {
-        "url": `http://issue-tracker-emmi.herokuapp.com//api/issues/${data.id}`,
+        "url": `http://issue-tracker-emmi.herokuapp.com/api/issues/${data.id}`,
         "method": "PUT",
         "data": data
     }
@@ -31,7 +31,7 @@ if(window.location.pathname == "/"){
         var id = $(this).attr("data-id")
 
         var request = {
-            "url": `http://issue-tracker-emmi.herokuapp.com//api/issues/${id}`,
+            "url": `http://issue-tracker-emmi.herokuapp.com/api/issues/${id}`,
             "method": "DELETE",
             
         }
