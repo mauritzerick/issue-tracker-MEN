@@ -3,7 +3,7 @@ const axios = require('axios');
 
 exports.homeRoutes = (req, res) => {
     // Make a get request to /api/issues
-    axios.get('http://localhost:3005/api/issues')
+    axios.get('http://issue-tracker-emmi.herokuapp.com//api/issues')
         .then(function(response){
             res.render('index', { issues : response.data });
         })
@@ -19,7 +19,7 @@ exports.add_issue = (req, res) =>{
 }
 
 exports.update_issue = (req, res) =>{
-    axios.get('http://localhost:3005/api/issues', { params : { id : req.query.id }})
+    axios.get('http://issue-tracker-emmi.herokuapp.com/api/issues', { params : { id : req.query.id }})
         .then(function(issuedata){
             res.render("update_issue", { issue : issuedata.data})
         })
