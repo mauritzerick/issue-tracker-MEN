@@ -39,6 +39,7 @@ a {
 
 .text-center{
     text-align: center;
+    color: black;
 }
 
 .border-shadow{
@@ -66,9 +67,10 @@ a {
 }
 
 #header nav{
-    background-color: #06d6a0;
+    /* background-color: #f89442; */
     padding: 1em 0;
     width: 100%;
+    
 }
 
 #site-main{
