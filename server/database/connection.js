@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const connectDB = async () => {
     try{
         //mongodb connects string
-        const con = await mongoose.connect(process.env.MONGO_URI,{
+        const con = await mongoose.connect(process.env.DATABASEURL,{
             useNewUrlParser:true,
             useUnifiedTopology:true,
             useFindAndModify:false,
