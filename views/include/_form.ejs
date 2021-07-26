@@ -1,0 +1,33 @@
+<!-- form handling -->
+<form action="/api/issues" method="POST" id="add_issue">
+    <div class="new_issue">
+        <div class="form-group">
+            <label for="title" class="text-light">Title</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="title" value="" placeholder="Insert title here">
+        </div>
+
+        <div class="form-group">
+            <label for="description" class="text-light">Description</label>
+            <input type="text" name="description" value="" placeholder="Please describe the issue">
+        </div>
+
+        <div class="form-group">
+            <label for="status" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="status" value="Open" >
+                <label for="radio-2" class="radio-label">Open</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio"  id="radio-3" name="status" value="Closed" >
+                <label for="radio-3" class="radio-label">Closed</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+    </div>
+
+                    
+</form>

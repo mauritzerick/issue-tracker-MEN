@@ -1,0 +1,17 @@
+<% for(var i = 0; i < issues.length; i++){ %>
+<tr>
+    <td><%= i + 1 %></td>
+    <td><%= issues[i].title %></td>
+    <td><%= issues[i].description %></td>
+    <td><%= issues[i].status %></td>
+    <td>
+        <a href="/update-issue?id=<%= issues[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+
+        <a class="btn border-shadow delete" data-id=<%= issues[i]._id%> >
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

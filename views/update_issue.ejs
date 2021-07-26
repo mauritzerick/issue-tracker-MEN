@@ -1,0 +1,60 @@
+<!--include header-->
+<%-include('include/_header')%>
+<!--/include header-->
+
+<!--Main Site-->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/"><i class="fas fa-angle-double-left"></i>All Issues</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Issue</h2>
+            <span class="text-light">Use the form to update an issue</span>
+        </div>
+
+        <!-- add issue form -->
+        <!-- form handling -->
+<form method="POST"id="update_issue">
+    <div class="new_issue">
+        <div class="form-group">
+            <label for="title" class="text-light">Title</label>
+            <input type="hidden" name="id" value="<%= issue._id %>">
+            <input type="text" name="name" value="<%= issue.title %>" placeholder="Issue's title">
+        </div>
+
+        <div class="form-group">
+            <label for="description" class="text-light">Description</label>
+            <input type="text" name="description" value="<%= issue.description %>" placeholder="Please describe the issue">
+        </div>
+
+        <div class="form-group">
+            <label for="status" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="status" value="Open" <%= issue.status == 'Open' ? 'checked' : '' %>>
+                <label for="radio-2" class="radio-label">Open</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio"  id="radio-3" name="status" value="Closed" <%= issue.status == 'Closed '? 'checked' : '' %>>
+                <label for="radio-3" class="radio-label">Closed</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+    </div>
+
+                    
+</form>
+    
+    </div>
+</main>
+<!--/Main Site-->
+
+
+<!--include footer-->
+<%-include('include/_footer')%>
+<!--/include footer-->
