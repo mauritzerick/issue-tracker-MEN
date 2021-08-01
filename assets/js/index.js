@@ -1,3 +1,5 @@
+//index js is used for client side requests (crud)
+
 
 $("#add_issue").submit(function(event){
     alert("Data created successfully");
